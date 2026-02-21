@@ -191,6 +191,8 @@ custom_formats_sonarr:
 - name: Whose Line (Not US Version)
   score: -10000
 qualities:
+- id: 3
+  name: Remux-2160p
 - id: -5
   name: WEB 2160p
   description: ''
@@ -203,6 +205,8 @@ qualities:
   name: Bluray-2160p
 - id: 7
   name: HDTV-2160p
+- id: 8
+  name: Remux-1080p
 - id: -2
   name: WEB 1080p
   description: ''
@@ -244,6 +248,7 @@ qualities:
 - id: 24
   name: SDTV
 upgrade_until:
-  id: -5
-  name: WEB 2160p
+  id: 3
+  name: Remux-2160p
+  description: 4K Ultra HD Blu-ray disc content remuxed into a playable file format
 language: must_original

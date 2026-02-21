@@ -1,11 +1,7 @@
-name: TV 1080p
-description: 'Based on the TRaSH Guides WEB-1080p (Alternative) profile, focusing
-  on balanced quality/file size.
-
-  - This profile is recommended for a set-it-and-forget-it setup.
-
-  - Ensure you add a **[delay profile](https://wiki.servarr.com/sonarr/settings#:~:text=%C2%B6-,Delay%20Profiles,-Delay%20profiles%20allow)**
-  to your setup. I prefer 60 minutes, but adjust this as needed.'
+name: Classic TV
+description: "For TV Shows without a proper HD Master \n- Ensure you add a **[delay\
+  \ profile](https://wiki.servarr.com/sonarr/settings#:~:text=%C2%B6-,Delay%20Profiles,-Delay%20profiles%20allow)**\
+  \ to your setup. I prefer 60 minutes, but adjust this as needed."
 tags:
 - Sonarr
 - 1080p
@@ -18,6 +14,10 @@ custom_formats:
   score: -10000
 custom_formats_radarr: []
 custom_formats_sonarr:
+- name: DVD Remux
+  score: 2500
+- name: DVD
+  score: 2000
 - name: WEB Tier 01
   score: 1700
 - name: WEB Tier 02
@@ -169,14 +169,10 @@ custom_formats_sonarr:
 - name: Whose Line (Not US Version)
   score: -10000
 qualities:
-- id: -2
-  name: WEB 1080p
-  description: ''
-  qualities:
-  - id: 9
-    name: WEBDL-1080p
-  - id: 11
-    name: WEBRip-1080p
+- id: 9
+  name: WEBDL-1080p
+- id: 11
+  name: WEBRip-1080p
 - id: 10
   name: Bluray-1080p
 - id: 12
@@ -210,6 +206,7 @@ qualities:
 - id: 24
   name: SDTV
 upgrade_until:
-  id: -2
-  name: WEB 1080p
+  id: 9
+  name: WEBDL-1080p
+  description: 1080p web download, untouched as released by the streaming service
 language: must_original
