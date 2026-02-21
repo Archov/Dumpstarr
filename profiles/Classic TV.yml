@@ -1,7 +1,9 @@
 name: Classic TV
-description: "For TV Shows without a proper HD Master \n- Ensure you add a **[delay\
-  \ profile](https://wiki.servarr.com/sonarr/settings#:~:text=%C2%B6-,Delay%20Profiles,-Delay%20profiles%20allow)**\
-  \ to your setup. I prefer 60 minutes, but adjust this as needed."
+description: 'For TV Shows without a proper HD Master Prioritizes DVD releases over
+  all web releases
+
+  - Ensure you add a **[delay profile](https://wiki.servarr.com/sonarr/settings#:~:text=%C2%B6-,Delay%20Profiles,-Delay%20profiles%20allow)**
+  to your setup. I prefer 60 minutes, but adjust this as needed.'
 tags:
 - Sonarr
 - 1080p
@@ -169,44 +171,56 @@ custom_formats_sonarr:
 - name: Whose Line (Not US Version)
   score: -10000
 qualities:
-- id: 9
-  name: WEBDL-1080p
-- id: 11
-  name: WEBRip-1080p
-- id: 10
-  name: Bluray-1080p
-- id: 12
-  name: HDTV-1080p
-- id: -3
-  name: WEB 720p
+- id: 3
+  name: Remux-2160p
+- id: 8
+  name: Remux-1080p
+- id: 4
+  name: Bluray-2160p
+- id: -2
+  name: Bluray
   description: ''
   qualities:
+  - id: 10
+    name: Bluray-1080p
+  - id: 13
+    name: Bluray-720p
+  - id: 18
+    name: Bluray-480p
+  - id: 17
+    name: Bluray-576p
+- id: 22
+  name: DVD
+- id: -1
+  name: Web
+  description: ''
+  qualities:
+  - id: 9
+    name: WEBDL-1080p
+  - id: 11
+    name: WEBRip-1080p
+  - id: 12
+    name: HDTV-1080p
   - id: 14
     name: WEBDL-720p
   - id: 15
     name: WEBRip-720p
-- id: 13
-  name: Bluray-720p
-- id: 16
-  name: HDTV-720p
-- id: 17
-  name: Bluray-576p
-- id: -4
-  name: WEB 480p
-  description: ''
-  qualities:
+  - id: 16
+    name: HDTV-720p
   - id: 19
     name: WEBDL-480p
   - id: 20
     name: WEBRip-480p
-- id: 18
-  name: Bluray-480p
-- id: 22
-  name: DVD
+  - id: 5
+    name: WEBDL-2160p
+  - id: 6
+    name: WEBRip-2160p
+  - id: 7
+    name: HDTV-2160p
 - id: 24
   name: SDTV
 upgrade_until:
-  id: 9
-  name: WEBDL-1080p
-  description: 1080p web download, untouched as released by the streaming service
+  id: 3
+  name: Remux-2160p
+  description: 4K Ultra HD Blu-ray disc content remuxed into a playable file format
 language: must_original
